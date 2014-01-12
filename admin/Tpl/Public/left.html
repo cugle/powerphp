@@ -1,11 +1,41 @@
-<volist name="menu" id="item">
-<h3 class="f14"><span class="switchs cu on" title="{$lang.expand_or_contract}"></span>{$item.name}</h3>
+
+<h3 class="f14"><span class="switchs cu on" title="{$lang.expand_or_contract}"></span>节点管理</h3>
 <ul>
-	<volist id="nav" name="item['navs']" >
-    	<li id="_MP{$nav.id}" class="sub_menu"><a href="javascript:_MP({$nav.id},'{$nav.url}');" hidefocus="true" style="outline:none;">{$nav.action_name}</a></li>
-	</volist>
+    <li id="_MP{47}" class="sub_menu"><a href="javascript:_MP(47,'{:u('Node/index')}');" hidefocus="true" style="outline:none;">节点列表</a></li>
+	
+	<li id="_MP{48}" class="sub_menu"><a href="javascript:_MP(48,'{:u('Node/add')}');" hidefocus="true" style="outline:none;">新增节点</a></li>
+	
+
 </ul>
-</volist>
+<h3 class="f14"><span class="switchs cu on" title="{$lang.expand_or_contract}"></span>权限管理</h3>
+<ul>
+    <li id="_MP{47}" class="sub_menu"><a href="javascript:_MP(47,'{:u('Access/index')}');" hidefocus="true" style="outline:none;">权限列表</a></li>
+	
+	<li id="_MP{48}" class="sub_menu"><a href="javascript:_MP(48,'{:u('Access/add')}');" hidefocus="true" style="outline:none;">新增权限</a></li>
+		
+</ul>
+<h3 class="f14"><span class="switchs cu on" title="{$lang.expand_or_contract}"></span>用户管理</h3>
+<ul>
+    <li id="_MP{47}" class="sub_menu"><a href="javascript:_MP(47,'{:u('User/index')}');" hidefocus="true" style="outline:none;">用户列表列表</a></li>
+	
+	<li id="_MP{48}" class="sub_menu"><a href="javascript:_MP(48,'{:u('User/add')}');" hidefocus="true" style="outline:none;">新增用户</a></li>
+		
+</ul>
+<h3 class="f14"><span class="switchs cu on" title="{$lang.expand_or_contract}"></span>分组管理</h3>
+<ul>
+    <li id="_MP{47}" class="sub_menu"><a href="javascript:_MP(47,'{:u('Role/index')}');" hidefocus="true" style="outline:none;">分组列表</a></li>
+	
+	<li id="_MP{48}" class="sub_menu"><a href="javascript:_MP(48,'{:u('Role/add')}');" hidefocus="true" style="outline:none;">新增分组</a></li>
+		
+</ul>
+<h3 class="f14"><span class="switchs cu on" title="{$lang.expand_or_contract}"></span>用户分组管理</h3>
+<ul>
+    <li id="_MP{47}" class="sub_menu"><a href="javascript:_MP(47,'{:u('Roleuser/index')}');" hidefocus="true" style="outline:none;">用户分组列表</a></li>
+	
+	<li id="_MP{48}" class="sub_menu"><a href="javascript:_MP(48,'{:u('Roleuser/add')}');" hidefocus="true" style="outline:none;">新增用户分组</a></li>
+		
+</ul>
+
 <script type="text/javascript">
 $(".switchs").each(function(i){
 	var ul = $(this).parent().next();

@@ -1,0 +1,34 @@
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">
+        <form name="adminForm" action="__URL__/delete" method="post">
+        <table class="adminlist" cellpadding="1">
+        <thead>
+      		<tr>
+      		<th style="width:2%;">data.id</th>
+			<th style="width:5%;">data.name</th>
+			<th style="width:5%">data.pid</th>
+			<th style="width:10%">data.status</th>
+			<th style="width:10%">data.remark</th>
+			<th style="width:1%">操作</th>
+      		</tr>
+      	</thead>
+			<volist id="data" name="list" >
+			<tr>
+      		<th style="width:2%;">{$data.id}</th>
+			<th style="width:5%;">{$data.name}</th>
+			<th style="width:5%">{$data.pid}</th>
+			<th style="width:10%">{$data.status}</th>
+			<th style="width:10%">{$data.remark}</th>
+			<th style="width:1%"><a href="{:u('Role/edit',array('id'=>$data['id']))}">edit</a></th>
+      		</tr>
+			</volist>
+			
+		<tbody>
+			
+		
+		</tbody>
+		</table>
+ <div class="result page">{$page}</div>

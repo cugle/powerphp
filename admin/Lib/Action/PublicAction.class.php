@@ -50,7 +50,7 @@ class PublicAction extends Action
 			
 			   		// 管理员不受权限控制影响
 			
-			 	 	 $_SESSION['administrator']        =    true; 
+			 	 	 //$_SESSION['administrator']        =    true; 
 			
 				}
 
@@ -66,7 +66,10 @@ class PublicAction extends Action
 	public function logout()
 	{
 		if(isset($_SESSION['admin_info'])) {
-			unset($_SESSION['admin_info']);			
+			unset($_SESSION['admin_info']);		
+			unset($_SESSION["_ACCESS_LIST"]);
+			unset($_SESSION["administrator"]);	
+			unset($_SESSION);			
 			$this->success('退出登录成功！',u('Public/login'));
 		}else {
 			$this->error('已经退出登录！');
@@ -119,7 +122,6 @@ class PublicAction extends Action
 		}
 		import('ORG.Util.RBAC');
 		$authInfo = RBAC::getModuleAccessList($_SESSION[C('USER_AUTH_KEY')],1);
-		print_r($authInfo);
 		$this->assign('menu',$menu);
 		$this->display('left');
 	}

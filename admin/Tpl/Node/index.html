@@ -1,0 +1,40 @@
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">
+        <form name="adminForm" action="__URL__/delete" method="post">
+        <table class="adminlist" cellpadding="1">
+        <thead>
+      		<tr>
+      		<th style="width:2%;">node.id</th>
+			<th> node.name</th>
+			<th style="width:5%;">node.title</th>
+			<th style="width:5%">node.remark</th>
+			<th style="width:10%">node.pid</th>
+			<th style="width:10%">node.level</th>
+			<th style="width:10%">node.sort</th>
+			<th style="width:10%">node.status</th>
+			<th style="width:1%">操作</th>
+      		</tr>
+      	</thead>
+			<volist id="node" name="list" >
+			<tr>
+      		<th style="width:2%;">{$node.id}</th>
+			<th> {$node.name}</th>
+			<th style="width:5%;">{$node.title}</th>
+			<th style="width:5%">{$node.remark}</th>
+			<th style="width:10%">{$node.pid}</th>
+			<th style="width:10%">{$node.level}</th>
+			<th style="width:10%">{$node.sort}</th>
+			<th style="width:10%">{$node.status}</th>
+			<th style="width:1%"><a href="{:u('Node/edit',array('id'=>$node['id']))}">edit</a></th>
+      		</tr>
+			</volist>
+			
+		<tbody>
+			
+		
+		</tbody>
+		</table>
+ <div class="result page">{$page}</div>
